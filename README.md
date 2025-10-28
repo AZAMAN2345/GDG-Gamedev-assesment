@@ -1,20 +1,25 @@
-**Novice (Comfortable with basics: variables, functions, simple logic)**
-Focus: Reinforcing fundamentals, understanding core game loops.
+  INSTRUCTIONS
+The task is to make a simple obstacle avoiding game where a shape avoids other shapes you are to carry out the task based on your skill level 
 
-**Avoid the Obstacles**
-Goal: Control a player character (a square/circle) with keyboard or mouse. Random obstacles (other squares) fall from the top. The game ends on collision.
+Novice (Comfortable with basics: variables, functions, simple logic)
+1.	Control a player character (a square/circle) with keyboard to avoid random spawning squares. The game ends on collision.
+ Intermediate (Comfortable with OOP, basic APIs, and multiple systems)
+ 
+1.	Implement a system that saves the top 5 high scores to a file (JSON, XML, or PlayerPrefs).
+2.	Create a Main menu
+3.	Add in game music 
+4.	When player dies add a Game over screen giving the player a choice to restart the game
+ADVANCED (Comfortable with architecture, patterns, and performance)
+1.	Implement a system that saves the top 5 high scores to a file (JSON, XML, or PlayerPrefs).
 
-Core Concepts: Player input, collision detection, game state (playing/game over), basic game object spawning.
+2.	Create a main menu
 
-1-Hour Version: Player movement and a single falling obstacle. Simple collision.
+3.	Add in game music
 
-**Intermediate (Comfortable with OOP, basic APIs, and multiple systems)**
-2-Hour Version: Multiple obstacles, a score that increases over time, and a "Game Over" screen.
-2. Local High Score & Save System
-Goal: Take a simple existing game (like the Novice "Avoid the Obstacles") and implement a system that saves the top 5 high scores to a file (JSON, XML, or PlayerPrefs).
+4.	 Implement a camera shake and death vfx anytime the player collides with an obstacle
 
-Core Concepts: Data persistence, serialization, file I/O, sorting algorithms.
+5.	When player dies add a game over screen that gives players the option to restart or exit the game.
 
-1-Hour Version: Save and load a single "Best Score."
+(Game should be locked at 60fps in all devices)
+6.	Export game file
 
-2-Hour Version: A full top-5 list that displays on a leaderboard screen.
