@@ -24,5 +24,6 @@ The task is to make a simple obstacle avoiding game where a shape avoids other s
 5.	When player dies add a game over screen that gives players the option to restart or exit the game.
 
 (Game should be locked at 60fps in all devices)
+
 6.	Export game file
 
