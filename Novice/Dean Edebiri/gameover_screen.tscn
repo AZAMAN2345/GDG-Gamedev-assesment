@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4mwc16fjg3pf"]
+
+[ext_resource type="Script" uid="uid://c7mpc01iyk8tu" path="res://gameover_screen.gd" id="1_no4x2"]
+
+[node name="GameoverScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_no4x2")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 32.0
+offset_right = 131.0
+offset_bottom = 63.0
+text = "RESTART?"
+
+[connection signal="pressed" from="Label/Button" to="." method="_on_button_pressed"]

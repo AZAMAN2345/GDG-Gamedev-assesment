@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://ch2su6xjq6g46"]
+
+[ext_resource type="Script" uid="uid://nym4jecroj53" path="res://titlescreen.gd" id="1_cjnew"]
+
+[node name="Titlescreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_cjnew")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "SHODDY ATTEMPT AT A GAME"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 32.0
+offset_right = 152.0
+offset_bottom = 63.0
+text = "START"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
