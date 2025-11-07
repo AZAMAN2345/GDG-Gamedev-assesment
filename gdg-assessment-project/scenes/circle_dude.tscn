@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://d0v38ffbdq1s2"]
+
+[ext_resource type="Texture2D" uid="uid://dy6v5rm5axe2p" path="res://assets/New Piskel (1).png" id="1_0xc68"]
+[ext_resource type="Script" uid="uid://y020jl3yc134" path="res://scripts/circle_dude.gd" id="1_jvm1h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvm1h"]
+atlas = ExtResource("1_0xc68")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l0dg2"]
+atlas = ExtResource("1_0xc68")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbvrl"]
+atlas = ExtResource("1_0xc68")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_78bvo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvm1h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l0dg2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbvrl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jvm1h"]
+radius = 13.601471
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l0dg2"]
+radius = 13.0
+
+[node name="Circle dude" type="CharacterBody2D"]
+z_index = 5
+script = ExtResource("1_jvm1h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(15.000008, -13)
+scale = Vector2(1.71875, 1.84375)
+sprite_frames = SubResource("SpriteFrames_78bvo")
+autoplay = "default"
+frame_progress = 0.8019007
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(15, -15)
+shape = SubResource("CircleShape2D_jvm1h")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(15, -14)
+shape = SubResource("CircleShape2D_l0dg2")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_body_entered"]
