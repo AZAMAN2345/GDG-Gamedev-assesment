@@ -1,81 +1,60 @@
- Novice Game Dev Task: "Avoid the Squares!"
-Welcome to your first game development task! This is designed to be beginner-friendly and help you learn core game development concepts. Don't worry if you're new to this - we'll break it down into manageable steps.
+ Beginner Game Dev Challenge
+Endless Flappy Bird Clone 
+🎯 Objective
 
-🎯 The Goal
-Create a simple game where you control a character to avoid falling squares. The game ends if you get hit.
+Build an endless Flappy Bird–style game that is fully playable, polished, and your own version — NOT A COPY AND PASTE CLONE
 
-🛠 What You'll Create
-A player character (circle or square) that you can move with keyboard keys
+⚠️ You may reference tutorials, but copying an entire tutorial project is not allowed.
+**
+✅ Mandatory Requirements (Must Have)**
+1️. Endless Gameplay
 
-Randomly spawning enemy squares that fall from the top
+The game never ends by itself
 
-Collision detection - game ends when hit
+Obstacles spawn infinitely
+Difficulty increases over time
+(speed, gap size, spawn rate, or gravity)
 
-A "Player Layer" for your character
+2️. Player Mechanics
 
-📋 Step-by-Step Instructions
-Step 1: Set Up Your Project
-Create a new Unity 2D project
+Tap / click / key to flap
 
-Create these folders in your Project window:
+Gravity always pulls the player down
 
-Scripts
+Player dies on collision (obstacles or ground)
 
-Scenes
+3️. Scoring System
 
-Prefabs
+Score increases when passing obstacles
 
-Step 2: Create Your Player
-In the Hierarchy, right-click → 2D Object → Sprite → Square (or Circle)
+Score resets on death
 
-Name this object "Player"
+4️. High Score System (Required 🔴)
 
-In the Inspector, find the "Layer" dropdown and click "Create New Layer..."
+Highest score is saved
 
-Name the new layer "Player Layer"
+High score persists after restarting the game
 
-Select your Player object and assign it to the "Player Layer"
+Display:
 
-Step 3: Make Your Player Move
-In the Scripts folder, create a new C# script called PlayerController
+Current score
 
-Open the script and add this basic movement code:
+High score
 
+(Local save only — file, PlayerPrefs, localStorage, etc.)
 
-Attach this script to your Player object
+5️. Game States
+You must handle at least:
+Start screen
+Playing
+Game Over
+Restart without closing the app
 
-Step 4: Create Enemy Squares
-Create a new Square sprite in Hierarchy, name it "Enemy"
+6️. Basic Polish
+Sound effect for:
+Flap
+Score
+Death
+Simple animation or visual feedback
 
-Give it a different color than your player (e.g., red)
-
-Create a new script called EnemySpawner:
-
-
-
-Step 5: Make Enemies Fall
-Turn your Enemy object into a prefab by dragging it from Hierarchy to the Prefabs folder
-
-Delete the Enemy from the Hierarchy (keep the prefab)
-
-Create an empty GameObject called "GameManager" and attach the EnemySpawner script
-
-Drag your Enemy prefab into the enemyPrefab slot in the Inspector
-
-Step 6: Add Collision Detection
-Add this to your PlayerController script:
-
-
-Make sure your Enemy prefab has a "Enemy" tag (create one if needed)
-
-Add Collider components to both Player and Enemy objects
-
-Step 7: Test Your Game!
-Press Play in Unity and test:
-
-Can you move with arrow keys/WASD?
-
-Do enemies spawn from the top?
-
-Does the game stop when you hit an enemy?
-
+Extra points will be awraded for creativity, Think ooutside the box Go crazy!!
