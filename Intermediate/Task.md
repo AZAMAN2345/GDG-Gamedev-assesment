@@ -1,126 +1,136 @@
-Intermediate Game Dev Task: "Coin Quest Platformer"
-Welcome to the intermediate challenge! This task will help you level up your skills by creating a complete platformer game with multiple levels, collectibles, and a persistent scoring system.
+**FPS Parkour**
+Momentum, Movement & Level Design
+🎯 Objective
 
-🎯 The Goal
-Create a platformer game where the player collects coins across multiple levels, with a high score system that persists between game sessions.
+Create a first-person parkour game where the fun comes from movement and level design, not combat.
 
-🛠 What You'll Create
-A player character with platformer physics (running, jumping)
+This challenge evaluates:
 
-Coin collectibles that increase score
+FPS movement systems
 
-Multiple levels with increasing difficulty
+Physics-based mechanics
 
-Scene management to transition between levels
+Intentional level design
 
-A persistent high score system that saves between plays
+Code structure & iteration
 
-A main menu and game over screen
+🎮 Core Game Concept
 
-📋 Step-by-Step Instructions
-Phase 1: Project Setup & Basic Movement
-Step 1: Project Foundation
-Create a new Unity 2D project
+The player completes movement-focused levels using speed, flow, and precision.
 
-Set up your folder structure:
+Combat is optional.
+Movement mastery is mandatory.
 
-text
-/Scripts
-  /Managers
-  /Player
-  /UI
-/Scenes
-/Prefabs
-/Art
-/Data
-Step 2: Create Your Player with Platformer Physics
-Create a player GameObject with Sprite Renderer and Rigidbody2D
+✅ Mandatory Gameplay Features
+1️⃣ Core FPS Movement (Required 🔴)
 
-Set Rigidbody2D: Gravity Scale = 3, Linear Drag = 0.5 (for better air control)
+Mouse look
 
-Add a Capsule Collider 2D for character shape
+WASD movement
 
-Create PlayerMovement.cs:
+Jump with air control
 
+Momentum preservation
 
-Step 3: Set Up Ground Detection
-Create an empty child object called "GroundCheck" at the bottom of your player
+Movement must feel smooth and responsive.
 
-Create a "Ground" layer and assign it to your platforms
+2️⃣ Parkour Mechanics (Required 🔴)
 
-In the PlayerMovement script, assign the GroundCheck transform and Ground layer
+You must implement at least 3 of the following:
 
-Phase 2: Gameplay Systems
-Step 4: Create Coin Collectibles
-Create a coin sprite (simple yellow circle works)
+Wall running
 
+Sliding (momentum-based)
 
-Make the coin a prefab
+Wall jumping
 
-Step 5: Build Your First Level
-Create platforms using tiles or sprites
+Vaulting
 
-Place several coins around the level
+Ledge grabbing
 
-Add a "LevelEnd" trigger at the end of the level
+Grapple hook
 
+Each mechanic must:
 
-Phase 3: Scene Management & Multiple Levels
-Step 6: Create Scene Management System
-Create at least 3 different level scenes:
+Have clear entry/exit conditions
 
-MainMenu
+Preserve or modify momentum intentionally
 
-Level1
+Be reusable across levels
 
-Level2
+3️⃣ Level Design Focus 
 
-Level3
+You must create 2–4 handcrafted levels designed around:
 
-GameOver
+Teaching mechanics naturally
 
+Flow and movement lines
 
-Step 7: Build Multiple Levels
-Design each level with increasing difficulty:
+Risk vs reward paths
 
-Level 1: Basic platforms, easy coin placement
+Skill expression
 
-Level 2: Added obstacles, platforms that move, harder jumps
+Each level must include:
 
-Level 3: Complex platforming challenges, timed elements
+A clear start & end
 
-Phase 4: High Score & Data Persistence
-Step 8: Create Game Manager
-Create an empty GameObject called "GameManager" and make it persist between scenes:
+Multiple possible routes (fast vs safe)
 
-csharp
-using UnityEngine;
-using UnityEngine.SceneManagement;
+Visual guidance (lighting, geometry, color)
 
+Procedual levels are allowed
 
-Step 9: Create UI System
-Create a Canvas with:
+4️⃣ Time / Score System
 
-Current score display
+Level completion time OR
 
-High score display
+Speed-based scoring system
 
-Level name display
+Persistent best time / score per level
 
-Create UIManager.cs:
+This encourages replayability and mastery.
 
-csharp
-using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
+5️⃣ Checkpoints & Restart
 
+Mid-level checkpoints
 
-Phase 5: Polish & Completion
-Step 10: Main Menu & Game Over
-Create MainMenu.cs:
+Instant restart
 
-csharp
-using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
+No long reload times
+
+🎨 Creativity & Design Depth
+
+Your game must have a strong identity:
+You can use any theme of your choice
+
+🧩 Code Architecture Requirements
+
+You must demonstrate:
+
+Modular movement system
+
+Clear separation:
+
+Input
+
+Movement logic
+
+Camera
+
+UI
+
+Minimal hard-coding
+
+Suggested components:
+
+PlayerController
+
+MovementStateMachine
+
+LevelManager
+
+CheckpointSystem
+
+TimeTrialManager
+
 
